@@ -18,7 +18,9 @@ async function getAllProducts(): Promise<IProduct[]> {
   return result;
 }
 
-export {
+const ProductsModel = {
   addProduct,
   getAllProducts,
 };
+
+export default ProductsModel;

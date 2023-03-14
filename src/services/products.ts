@@ -1,12 +1,19 @@
 import { IProduct } from '../interfaces';
-import * as productsModel from '../models/products';
+import ProductsModel from '../models/products';
 
-export async function addProduct({ name, amount }: IProduct) {
-  const { insertId } = await productsModel.addProduct({ name, amount });
+async function addProduct({ name, amount }: IProduct) {
+  const { insertId } = await ProductsModel.addProduct({ name, amount });
   return insertId;
 }
 
-export async function getAllProducts() {
-  const products = await productsModel.getAllProducts();
+async function getAllProducts() {
+  const products = await ProductsModel.getAllProducts();
   return products;
 }
+
+const ProductsService = {
+  addProduct,
+  getAllProducts,
+};
+
+export default ProductsService;
