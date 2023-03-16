@@ -1,10 +1,8 @@
 import { Request, Response } from 'express';
-import OrdersModel from '../models/orders';
 import OrdersService from '../services/orders';
 
 async function getOrders(_req: Request, res: Response) {
-  // TODO: Change to OrdersServices
-  const result = await OrdersModel.getOrders();
+  const result = await OrdersService.getOrders();
   res.status(200).json(result);
 }
 
