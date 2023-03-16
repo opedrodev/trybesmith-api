@@ -2,6 +2,9 @@ import { Request, Response } from 'express';
 import { createToken } from '../auth';
 import LoginService from '../services/login';
 
+/**
+ * @description - Login a user and return a token if successful 
+ */
 async function login(req: Request, res: Response) {
   const result = await LoginService.login(req.body);
 
