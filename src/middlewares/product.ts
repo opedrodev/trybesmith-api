@@ -3,7 +3,7 @@ import { ValidationError } from 'yup';
 import { IError } from '../interfaces';
 import productValidationSchema from '../validations/productValidationSchema';
 
-async function product(req: Request, res: Response, next: NextFunction) {
+async function validate(req: Request, res: Response, next: NextFunction) {
   try {
     await productValidationSchema.validate(req.body);
     next();
@@ -16,7 +16,7 @@ async function product(req: Request, res: Response, next: NextFunction) {
 }
 
 const ProductMiddleware = {
-  product,
+  validate,
 };
 
 export default ProductMiddleware;

@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post(
   '/',
-  ProductMiddleware.product,
+  ProductMiddleware.validate,
   ProductsController.addProduct,
 );
 

@@ -4,6 +4,6 @@ import UserMiddleware from '../middlewares/user';
 
 const router = express.Router();
 
-router.post('/', UserMiddleware.user, UserController.addUser);
+router.post('/', UserMiddleware.validate, UserController.addUser);
 
 export default router;

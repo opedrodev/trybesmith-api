@@ -3,7 +3,7 @@ import { ValidationError } from 'yup';
 import { IError } from '../interfaces';
 import loginValidationSchema from '../validations/loginValidationSchema';
 
-async function login(req: Request, res: Response, next: NextFunction) {
+async function validate(req: Request, res: Response, next: NextFunction) {
   try {
     await loginValidationSchema.validate(req.body);
     next();
@@ -16,7 +16,7 @@ async function login(req: Request, res: Response, next: NextFunction) {
 }
 
 const LoginMiddleware = {
-  login,
+  validate,
 };
 
 export default LoginMiddleware;

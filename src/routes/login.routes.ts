@@ -4,6 +4,6 @@ import LoginMiddleware from '../middlewares/login';
 
 const router = express.Router();
 
-router.post('/', LoginMiddleware.login, LoginController.login);
+router.post('/', LoginMiddleware.validate, LoginController.login);
 
 export default router;
