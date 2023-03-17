@@ -25,6 +25,12 @@ The response will be as following:
     "name": "Long sword",
     "amount": "30 golden pieces",
     "order_id": null
+  },
+  {
+    "id": 2,
+    "name": "Unecessary big shield",
+    "amount": "20 golden pieces",
+    "order_id": 1
   }
 ]
 ```
